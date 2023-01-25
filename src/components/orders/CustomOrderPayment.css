@@ -1,0 +1,74 @@
+.custom_order_payment__section {
+  display: flex;
+  justify-content: space-between;
+}
+.custom_order_payment__header_section ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f3f3f3;
+  padding: 5px;
+}
+.custom_order_payment__header_section ul li .custom_order_header__title {
+  font-weight: 700;
+  width: 150px;
+}
+.custom_order_table__section {
+  display: flex;
+  justify-content: space-between;
+}
+.custom_order_product__section {
+  width: 64%;
+  border-right: 1px solid #ddd;
+  padding: 5px;
+}
+.custom_order_get_payment__section {
+  width: 35%;
+  border-left: 1px solid #ddd;
+  padding: 5px;
+}
+.custom_card {
+  margin-bottom: 0;
+}
+.input_field_row__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.input_field__section {
+  width: 100%;
+  position: relative;
+}
+.input_field__section label {
+  margin: 0;
+}
+.input_file__field {
+  border: 1px solid rgb(212, 212, 212);
+  width: 100%;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.input_field__section Button {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.input_field__section button span {
+  font-size: 12px !important;
+}
+.input_field_row__section .input_field__section div .p-inputtext {
+  padding: 0.6rem 0.75rem !important;
+}
+.input_field_row__section .input_field__section .p-inputtext {
+  padding: 0.6rem 0.75rem !important;
+}
+.input_field_row__section div span .p-inputtext {
+  padding: 0.6rem 0.75rem !important;
+}
+.spinner__icon {
+  position: absolute;
+  top: 17px;
+  right: 40%;
+}

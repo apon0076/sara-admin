@@ -1,0 +1,94 @@
+.requisition_container {
+  margin: 1% 10px 10px 15%;
+}
+.requisition__print {
+  height: 80vh;
+  overflow: auto;
+}
+
+.requisition__print_btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.requisition__print_btn button {
+  padding: 5px 10px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.requisition_purchase_history {
+  margin-top: 30px;
+}
+.requisition_purchase_history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(126, 126, 126);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.requisition_product__list_section {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.requisition_product__list_section_title {
+  margin: 0;
+  font-weight: 600;
+}
+.requisition_product__list_section_table {
+  width: 100%;
+}
+.requisition_product__list_section_table thead tr th {
+  border: 1px solid rgb(73, 73, 73);
+  padding: 5px;
+}
+.requisition_product__list_section_table tbody tr td {
+  border: 1px solid rgb(158, 158, 158);
+  padding: 5px;
+}
+.requisition__index_col {
+  width: 2%;
+  text-align: center;
+}
+.requisition__name_col {
+  width: 25%;
+}
+.requisition__sku_col {
+  width: 10%;
+  text-align: center;
+}
+
+.requisition__price_col {
+  width: 10%;
+  text-align: center;
+}
+.requisition__quantity_col {
+  width: 5%;
+  text-align: center;
+}
+.requisition__total_col {
+  width: 10%;
+  text-align: center;
+}
+
+@media print {
+  /* All your print styles go here */
+  #header,
+  #footer,
+  #nav,
+  .requisition__print_btn,
+  .sidebar {
+    display: none !important;
+  }
+  .requisition_container {
+    margin: 20px 40px;
+  }
+  .requisition__print {
+    /* margin: 20px 40px; */
+    overflow: visible;
+  }
+}

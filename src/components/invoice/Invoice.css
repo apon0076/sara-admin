@@ -1,0 +1,262 @@
+.seller_invoice_container {
+  margin: 1% 10px 10px 15%;
+}
+.seller__print {
+  height: 80vh;
+  overflow: auto;
+}
+
+.seller_invoice_barcode__section {
+  width: 50%;
+  border: 2px solid rgb(197, 197, 197);
+  padding: 8px;
+  margin-left: 20px;
+}
+.seller_invoice_logo__section {
+  display: flex;
+  justify-content: space-between;
+}
+.seller_invoice_logo__date_section p {
+  font-size: 12px;
+  margin: 0;
+}
+.seller_invoice_logo__logo_section img {
+  height: 50px;
+  width: auto;
+}
+.barcode_section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.barcode_title {
+  font-weight: 600;
+  margin: -33px 0 0 0;
+  z-index: 1;
+}
+.qr_code__section_title {
+  margin: 0;
+  font-weight: 600;
+}
+.qr_code__items {
+  display: flex;
+  justify-content: space-between;
+}
+.qr_code__addresses {
+  width: 65%;
+  margin: 0;
+  font-size: 14px;
+}
+.qr_code__section {
+  margin: 4px 0;
+}
+.seller_invoice__print_btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+.seller_invoice__print_btn2 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.package_information__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.package_information__section p {
+  margin: 0;
+  border: 1px solid #000;
+  padding: 3px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  height: 47px;
+}
+.seller_invoice__print_btn2 button,
+.seller_invoice__print_btn button {
+  padding: 5px 10px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.barcode_section svg g text {
+  display: none;
+}
+.seller_invoice_purchase_history {
+  margin-top: 30px;
+}
+.seller_invoice_purchase_history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(126, 126, 126);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.seller_invoice_purchase_history__logo_section {
+  height: 75px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  padding: 2px;
+}
+.seller_invoice_purchase_history__logo_section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.seller_invoice_purchase_history__header_info_return {
+  margin-bottom: 5px;
+  padding: 2px;
+}
+.seller_invoice_purchase_history__address_section {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.seller_invoice_purchase_history__address_section_return {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+.seller_invoice_purchase_history_delivery {
+  width: 48%;
+}
+.seller_invoice_purchase_history_billing {
+  width: 48%;
+}
+.seller_invoice_purchase_history__addresss_title {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0 5px 0;
+}
+.seller_invoice_purchase_history__addresss {
+  margin: 0;
+  font-size: 12px;
+}
+.seller_invoice_purchase_history__policy {
+  margin: 0;
+  font-size: 12px;
+}
+.seller_invoice_purchase_history__policy_bottom {
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.seller_invoice_purchase_history__addresss span {
+  font-weight: 600;
+}
+.invoice_product__list_section {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.invoice_product__list_section_title {
+  margin: 0;
+  font-weight: 600;
+}
+.invoice_product__list_section_table {
+  width: 100%;
+}
+.invoice_product__list_section_table thead tr th {
+  border: 1px solid rgb(73, 73, 73);
+  padding: 5px;
+}
+.invoice_product__list_section_table tbody tr td {
+  border: 1px solid rgb(158, 158, 158);
+  padding: 5px;
+}
+.invoice__index_col {
+  width: 2%;
+  text-align: center;
+  font-size: 10px;
+}
+.invoice__name_col {
+  width: 15%;
+  text-align: center;
+  font-size: 10px;
+}
+.invoice__sku_col {
+  width: 10%;
+  text-align: center;
+  font-size: 10px;
+}
+
+.invoice__price_col {
+  width: 10%;
+  text-align: center;
+  font-size: 10px;
+}
+.invoice__quantity_col {
+  width: 5%;
+  text-align: center;
+  font-size: 10px;
+}
+.invoice__total_col {
+  width: 10%;
+  text-align: center;
+  font-size: 10px;
+}
+.invoice__summary_section {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.invoice__summary_section table {
+  width: 40%;
+}
+.invoice__summary_section table tr td {
+  border: 2px solid rgb(158, 158, 158);
+  padding: 2px;
+  text-align: end;
+}
+.invoice__total_col {
+  font-size: 12px;
+}
+.invoice_total__row {
+  font-weight: 600;
+  font-size: 12px;
+}
+.invoice_product__list_section_cancel_reason_title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+.seller_invoice_purchase_history__cancel_reason {
+  font-weight: 700;
+  font-size: 16px;
+}
+@media print {
+  /* All your print styles go here */
+  #header,
+  #footer,
+  #nav,
+  .seller_invoice__print_btn,
+  .seller_invoice__print_btn2,
+  .sidebar {
+    display: none !important;
+  }
+  .seller_invoice_container {
+    margin: 20px 40px;
+  }
+  .seller_incoice_barcode__area {
+    height: 100vh;
+  }
+  .seller__print {
+    /* margin: 20px 40px; */
+    overflow: visible;
+  }
+}

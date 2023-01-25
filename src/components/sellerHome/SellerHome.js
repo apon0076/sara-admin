@@ -1,0 +1,610 @@
+import React, { Fragment } from 'react';
+import { Navigation, Box, MessageSquare, Users, Briefcase, CreditCard, ShoppingCart, Calendar } from 'react-feather';
+import * as Icon from "react-feather"
+import CountUp from 'react-countup';
+import { Chart } from "react-google-charts";
+import '../home/Home.css'
+import { Bar, Line } from 'react-chartjs-2';
+import {
+  lineOptions,
+  buyOption,
+  employeeData,
+  employeeOptions,
+  buyData,
+  lineData,
+  doughnutOptions,
+  pieOptions,
+  LineOptions1,
+  LineOptions2,
+  LineOptions3
+} from '../../constants/chartData'
+
+const SellerHome = () => {
+  
+  return (
+    <Fragment>
+      <div className="page-wrapper">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-3 col-md-3">
+              <div className="card o-hidden widget-cards">
+                <div className="bg-warning card-body">
+                  <div className="media static-top-widget d-flex justify-content-between" style={{ display: "flex" }}>
+                    <div className="icons-widgets col-md-4">
+                      <div className="align-self-center text-center"><Icon.DollarSign className="font-warning" /></div>
+                    </div>
+                    <div className="media-body col-md-8"><span className="m-0">Pending Amount</span>
+                      <h3 className="mb-0">Tk <CountUp className="counter" end={6659} /><small className="text-white"> This Month</small></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-3">
+              <div className="card o-hidden  widget-cards">
+                <div className="bg-secondary card-body">
+                  <div className="media static-top-widget d-flex justify-content-between" style={{ display: "flex" }}>
+                    <div className="icons-widgets col-md-4">
+                      <div className="align-self-center text-center"><Box className="text-info" /></div>
+                    </div>
+                    <div className="media-body col-md-8"><span className="m-0">Total Active Products</span>
+                      <h3 className="mb-0"> <CountUp className="counter" end={638} /><small className="text-white"> This Month</small></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-3">
+              <div className="card o-hidden widget-cards">
+                <div className="bg-primary card-body">
+                  <div className="media static-top-widget d-flex justify-content-between" style={{ display: "flex" }}>
+                    <div className="icons-widgets col-md-4">
+                      <div className="align-self-center text-center"><Icon.Database className="font-primary" /></div>
+                    </div>
+                    <div className="media-body col-md-8"><span className="m-0">Total Pending Orders</span>
+                      <h3 className="mb-0"> <CountUp className="counter" end={25} /><small className="text-white"> This Month</small></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-3">
+              <div className="card o-hidden widget-cards">
+                <div className="bg-danger card-body">
+                  <div className="media static-top-widget d-flex justify-content-between" style={{ display: "flex" }}>
+                    <div className="icons-widgets col-md-4">
+                      <div className="align-self-center text-center"><Icon.Clipboard className="font-danger" /></div>
+                    </div>
+                    <div className="media-body col-md-8"><span className="m-0">Today's Orders</span>
+                      <h3 className="mb-0"> <CountUp className="counter" end={138} /><small className="text-white"> Today</small></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="card">
+                <div className="card-header">
+                  <h5>Market Value</h5>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="market-chart">
+                    <Bar data={lineData} options={lineOptions} width={778} height={308} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="card">
+                <div className="card-header">
+                  <h5>Latest Orders</h5>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="user-status table-responsive latest-order-table">
+                    <table className="table table-bordernone">
+                      <thead>
+                        <tr>
+                          <th scope="col">Order ID</th>
+                          <th scope="col">Order Total</th>
+                          <th scope="col">Payment Method</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td className="digits">$120.00</td>
+                          <td className="font-danger">Bank Transfers</td>
+                          <td className="digits">On Way</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td className="digits">$90.00</td>
+                          <td className="font-secondary">Ewallets</td>
+                          <td className="digits">Delivered</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td className="digits">$240.00</td>
+                          <td className="font-warning">Cash</td>
+                          <td className="digits">Delivered</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td className="digits">$120.00</td>
+                          <td className="font-primary">Direct Deposit</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td className="digits">$50.00</td>
+                          <td className="font-primary">Bank Transfers</td>
+                          <td className="digits">Delivered</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <a href="#" onClick={(e) => { e.preventDefault() }} className="btn btn-primary">View All Orders</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-3">
+              <div className="card order-graph sales-carousel">
+                <div className="card-header">
+                  <h6>Total Sales</h6>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="small-chartjs">
+                        <div className="flot-chart-placeholder" id="simple-line-chart-sparkline-3">
+                          <Chart
+                            height={'60px'}
+                            chartType="LineChart"
+                            loader={<div>Loading Chart</div>}
+                            data={[
+                              ['x', 'time'],
+                              [0, 20],
+                              [1, 5],
+                              [2, 120],
+                              [3, 10],
+                              [4, 140],
+                              [5, 15]
+                            ]}
+                            options={lineOptions}
+                            legend_toggle
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="value-graph">
+                        <h3>42% <span><i className="fa fa-angle-up font-primary"></i></span></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="media" style={{ display: "flex" }}>
+                    <div className="media-body">
+                      <span>Sales Last Month</span>
+                      <h2 className="mb-0">9054</h2>
+                      <p>0.25% <span><i className="fa fa-angle-up"></i></span></p>
+                      <h5 className="f-w-600 f-16">Gross sales of August</h5>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    </div>
+                    <div className="bg-primary b-r-8" style={{ height: "50px", width: "50px" }}>
+                      <div className="small-box">
+                        <Briefcase />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="card order-graph sales-carousel">
+                <div className="card-header">
+                  <h6>Total purchase</h6>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="small-chartjs">
+                        <div className="flot-chart-placeholder" id="simple-line-chart-sparkline">
+                          <Chart
+                            height={'60px'}
+                            chartType="LineChart"
+                            loader={<div>Loading Chart</div>}
+                            data={[
+                              ['x', 'time'],
+                              [0, 85],
+                              [1, 83],
+                              [2, 90],
+                              [3, 70],
+                              [4, 85],
+                              [5, 60],
+                              [6, 65],
+                              [7, 63],
+                              [8, 68],
+                              [9, 68],
+                              [10, 65],
+                              [11, 40],
+                              [12, 60],
+                              [13, 75],
+                              [14, 70],
+                              [15, 90]
+                            ]}
+                            options={LineOptions1}
+                            legend_toggle
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="value-graph">
+                        <h3>20% <span><i className="fa fa-angle-up font-secondary"></i></span></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="media" style={{ display: "flex" }}>
+                    <div className="media-body">
+                      <span>Monthly Purchase</span>
+                      <h2 className="mb-0">2154</h2>
+                      <p>0.13% <span><i className="fa fa-angle-up"></i></span></p>
+                      <h5 className="f-w-600 f-16">Avg Gross purchase</h5>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    </div>
+                    <div className="bg-secondary b-r-8" style={{ height: "50px", width: "50px" }}>
+                      <div className="small-box">
+                        <CreditCard />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="card order-graph sales-carousel">
+                <div className="card-header">
+                  <h6>Total cash transaction</h6>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="small-chartjs">
+                        <div className="flot-chart-placeholder" id="simple-line-chart-sparkline-2">
+                          <Chart
+                            height={'60px'}
+                            chartType="LineChart"
+                            loader={<div>Loading Chart</div>}
+                            data={[
+                              ['x', 'time'],
+                              [0, 85],
+                              [1, 83],
+                              [2, 90],
+                              [3, 70],
+                              [4, 85],
+                              [5, 60],
+                              [6, 65],
+                              [7, 63],
+                              [8, 68],
+                              [9, 68],
+                              [10, 65],
+                              [11, 40],
+                              [12, 60],
+                              [13, 75],
+                              [14, 70],
+                              [15, 90]
+                            ]}
+                            options={LineOptions2}
+                            legend_toggle
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="value-graph">
+                        <h3>28% <span><i className="fa fa-angle-up font-warning"></i></span></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="media" style={{ display: "flex" }}>
+                    <div className="media-body">
+                      <span>Cash on hand</span>
+                      <h2 className="mb-0">4672</h2>
+                      <p>0.8% <span><i className="fa fa-angle-up"></i></span></p>
+                      <h5 className="f-w-600 f-16">Details about cash</h5>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    </div>
+                    <div className="bg-warning b-r-8" style={{ height: "50px", width: "50px" }}>
+                      <div className="small-box">
+                        <ShoppingCart />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="card order-graph sales-carousel">
+                <div className="card-header">
+                  <h6>Daily Deposits</h6>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="small-chartjs">
+                        <div className="flot-chart-placeholder" id="simple-line-chart-sparkline-1">
+                          <Chart
+                            height={'60px'}
+                            chartType="LineChart"
+                            loader={<div>Loading Chart</div>}
+                            data={[
+                              ['x', 'time'],
+                              [0, 85],
+                              [1, 83],
+                              [2, 90],
+                              [3, 70],
+                              [4, 85],
+                              [5, 60],
+                              [6, 65],
+                              [7, 63],
+                              [8, 68],
+                              [9, 68],
+                              [10, 65],
+                              [11, 40],
+                              [12, 60],
+                              [13, 75],
+                              [14, 70],
+                              [15, 90]
+                            ]}
+                            options={LineOptions3}
+                            legend_toggle
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="value-graph">
+                        <h3>75% <span><i className="fa fa-angle-up font-danger"></i></span></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="media" style={{ display: "flex" }}>
+                    <div className="media-body">
+                      <span>Security Deposits</span>
+                      <h2 className="mb-0">5782</h2>
+                      <p>0.25% <span><i className="fa fa-angle-up"></i></span></p>
+                      <h5 className="f-w-600 f-16">Gross sales of June</h5>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    </div>
+                    <div className="bg-danger b-r-8" style={{ height: "50px", width: "50px" }}>
+                      <div className="small-box">
+                        <Calendar />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="card">
+                <div className="card-header">
+                  <h5>Buy / Sell</h5>
+                </div>
+                <div className="card-body sell-graph bg-white">
+                  <Line data={buyData} options={buyOption} width={700} height={350} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="card height-equal">
+                <div className="card-header">
+                  <h5>Products Cart</h5>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="user-status table-responsive products-table">
+                    <table className="table table-bordernone mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">Details</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Simply dummy text of the printing</td>
+                          <td className="digits">1</td>
+                          <td className="font-primary">Pending</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>Long established</td>
+                          <td className="digits">5</td>
+                          <td className="font-secondary">Cancle</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>sometimes by accident</td>
+                          <td className="digits">10</td>
+                          <td className="font-secondary">Cancle</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>classical Latin literature</td>
+                          <td className="digits">9</td>
+                          <td className="font-primary">Return</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>keep the site on the Internet</td>
+                          <td className="digits">8</td>
+                          <td className="font-primary">Pending</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>Molestiae consequatur</td>
+                          <td className="digits">3</td>
+                          <td className="font-secondary">Cancle</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                        <tr>
+                          <td>Pain can procure</td>
+                          <td className="digits">8</td>
+                          <td className="font-primary">Return</td>
+                          <td className="digits">$6523</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="card">
+                <div className="card-header">
+                  <h5>Revenue for last month</h5>
+                </div>
+                <div className="card-body bg-white">
+                  <div className="ct-4 flot-chart-container ">
+                    <Line data={employeeData} options={employeeOptions} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="card">
+                  <div className="card-header">
+                    <h5>Sales Status</h5>
+                  </div>
+                  <div className="card-body bg-white">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="order-graph">
+                          <h6>Orders By Location</h6>
+                          <div className="chart-block chart-vertical-center">
+                            <Chart
+                              width={"100%"}
+                              height={'180px'}
+                              chartType="PieChart"
+                              loader={<div>Loading Chart</div>}
+                              data={[
+                                ['Task', 'Hours per Day'],
+                                ['Saint Lucia', 300],
+                                ['Kenya', 50],
+                                ['Liberia', 100],
+                              ]}
+                              options={doughnutOptions}
+                              legend_toggle
+                            />
+                          </div>
+                          <div className="order-graph-bottom">
+                            <div className="media d-flex align-items-center">
+                              <div className="order-color-primary"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0">Saint Lucia <span className="pull-right">$157</span></h6>
+                              </div>
+                            </div>
+                            <div className="media d-flex align-items-center">
+                              <div className="order-color-secondary"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0">Kenya <span className="pull-right">$347</span></h6>
+                              </div>
+                            </div>
+                            <div className="media d-flex align-items-center">
+                              <div className="order-color-danger"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0">Liberia<span className="pull-right">$468</span></h6>
+                              </div>
+                            </div>
+                            <div className="media d-flex align-items-center">
+                              <div className="order-color-warning"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0">Christmas Island<span className="pull-right">$742</span></h6>
+                              </div>
+                            </div>
+                            <div className="media d-flex align-items-center">
+                              <div className="order-color-success"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0">Saint Helena <span className="pull-right">$647</span></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="order-graph sm-order-space">
+                          <h6>Sales By Location</h6>
+                          <div className="peity-chart-dashboard text-center">
+                            <Chart
+                              chartType="PieChart"
+                              data={[
+                                ['Task', 'Hours per Day'],
+                                ['Saint Lucia', 300],
+                                ['Kenya', 50],
+                                ['Liberia', 100],
+                              ]}
+                              options={pieOptions}
+                              graph_id="PieChart"
+                              width={"100%"}
+                              height={"180px"}
+                              legend_toggle
+                            />
+                          </div>
+                          <div className="order-graph-bottom sales-location">
+                            <div className="media">
+                              <div className="order-shape-primary"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0 mr-0">Germany <span className="pull-right">25%</span></h6>
+                              </div>
+                            </div>
+                            <div className="media">
+                              <div className="order-shape-secondary"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0 mr-0">Brasil <span className="pull-right">10%</span></h6>
+                              </div>
+                            </div>
+                            <div className="media">
+                              <div className="order-shape-danger"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0 mr-0">United Kingdom<span className="pull-right">34%</span></h6>
+                              </div>
+                            </div>
+                            <div className="media">
+                              <div className="order-shape-warning"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0 mr-0">Australia<span className="pull-right">5%</span></h6>
+                              </div>
+                            </div>
+                            <div className="media">
+                              <div className="order-shape-success"></div>
+                              <div className="media-body">
+                                <h6 className="mb-0 mr-0">Canada <span className="pull-right">25%</span></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  )
+}
+
+export default SellerHome

@@ -1,0 +1,97 @@
+/* Product Variant Table CSS Start  */
+.product_variant__table {
+  width: 100%;
+}
+.product_variant__table thead tr th {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  background-color: #f8f9fa;
+}
+.product_variant__table tbody tr td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+}
+.product_variant__table tbody tr td input {
+  padding: 5px;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 5px;
+}
+.product_variant__table tbody tr td div {
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 100%;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+.product_variant__table tbody tr td select {
+  padding: 5px 10px;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 5px;
+}
+.product_variant__table tbody {
+  background-color: #fff;
+}
+.action__table-section div {
+  border: none !important;
+  justify-content: space-between;
+  width: 100% !important;
+  justify-content: flex-start !important;
+  gap: 10px;
+}
+.action_delete__btn {
+  border: 1px solid rgb(201, 201, 201);
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.8rem;
+  width: 2.8rem;
+  transition: all ease-in-out 0.2s;
+}
+.action_delete__btn:hover {
+  background-color: rgb(242, 242, 242);
+}
+.action_discount__btn {
+  font-size: 13px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.action_discount__btn-section {
+  position: relative;
+  width: 100%;
+  border: none;
+}
+.action_discount__popup-section {
+  position: absolute;
+  border: none !important;
+  background-color: #fff;
+  padding: 10px;
+  display: none !important;
+  border-radius: 5px !important;
+  top: -256px;
+  box-shadow: 0px 0px 2px 1px #c7c7c7;
+  z-index: 1;
+}
+.action_discount__btn-section:hover .action_discount__popup-section {
+  display: block !important;
+}
+.discount_form__section {
+  display: flex;
+  flex-direction: column;
+}
+.discount_discount-type__section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section.discount_discount__radio label {
+  margin-left: 4px;
+}
+
+/* Product Variant Table CSS End  */

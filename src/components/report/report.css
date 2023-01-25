@@ -1,0 +1,167 @@
+/* Order Reporting CSS Start */
+
+.white-box-title {
+  padding: 0;
+}
+.report-head {
+  background-color: #1f5da0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.header-display {
+  display: flex;
+  align-items: center;
+}
+.header-display span {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.print__option {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.print__option li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  color: #c7c7c7;
+}
+.pdf-icon {
+  color: #1f5da0;
+}
+.option-body {
+  margin: 10px 15px;
+  margin-bottom: 40px;
+}
+
+.option-body-element {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+}
+.option-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 6px;
+  box-shadow: 0 0 5px #c7c7c7;
+  width: 65%;
+}
+.option-lebel {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.option-active,
+.format-active {
+  background-color: #2582c5 !important;
+  color: #eaf3f9 !important;
+  font-weight: 500;
+}
+.icon-active {
+  color: #eaf3f9 !important;
+  font-weight: 500;
+}
+.icon-opt {
+  font-size: 20px !important;
+  width: 20px;
+  height: 20px;
+}
+.icon-opt:hover {
+  color: #eaf3f9 !important;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+}
+.option_button,
+.format_button {
+  display: flex;
+  align-items: center;
+  border: none;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px;
+}
+.format_button {
+  width: 33.33%;
+  justify-content: center;
+  padding: 10px;
+}
+.option_button:hover,
+.format_button:hover {
+  background-color: #419ee2;
+  color: #eaf3f9 !important;
+  transition: all 0.5s ease-in-out;
+}
+.option-text {
+  margin-left: 16px;
+  font-size: 0.94vw;
+}
+.option-attribute-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 40px;
+  box-shadow: 0 0 5px #c7c7c7;
+  padding-bottom: 25px;
+  width: 100%;
+}
+.calender-container {
+  margin: 0 2px;
+  width: 100%;
+  position: relative;
+}
+.calender-container > span {
+  width: 100%;
+}
+.input-control,
+.drop-control {
+  width: 100%;
+}
+.format-container {
+  display: flex;
+  margin-top: 50px;
+  padding: 5px 6px;
+  box-shadow: 0 0 5px #c7c7c7;
+  width: 65%;
+}
+.button-container {
+  margin-top: 50px;
+}
+.generate-btn {
+  padding: 7px 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+}
+.generate-btn:hover {
+  background-color: #1f5da0 !important;
+}
+/* Order Reporting CSS End */
+
+@media only screen and (max-width: 1350px) {
+  .option-text {
+    font-size: 1.1vw;
+  }
+}
+@media only screen and (max-width: 1290px) {
+  .option-text {
+    font-size: 0.95vw;
+  }
+}
+@media only screen and (max-width: 1169px) {
+  .option-text {
+    font-size: 1.2vw;
+  }
+}

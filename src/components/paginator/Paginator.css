@@ -1,0 +1,78 @@
+.pagination__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.pagination__section ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+.pagination__section ul li {
+  margin: 0 2px;
+  font-size: 14px;
+  color: rgb(124, 124, 124);
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.2s;
+}
+.page_more_than__thousand {
+  width: 45px;
+}
+.pagination__section ul li:hover {
+  background-color: #e2e2fa;
+  border-radius: 100%;
+  color: rgb(61, 61, 61);
+}
+.page__active {
+  background-color: #f0f0fd;
+  border-radius: 100%;
+  color: rgb(61, 61, 61);
+}
+.pagination__section p {
+  margin: 0 10px;
+  font-size: 12px;
+  color: rgb(124, 124, 124);
+}
+.pagination__section select {
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: rgb(124, 124, 124);
+}
+
+/* Tooltip CSS Start */
+
+/* .first_page__btn {
+  position: relative;
+}
+.first_page__btn::after {
+  content: "First";
+  position: absolute;
+  padding: 0 3px;
+  bottom: -20px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 0 5px #c7c7c7;
+  background-color: #fff;
+}
+.prev_page__btn {
+  position: relative;
+}
+.next_page__btn {
+  position: relative;
+}
+.last_page__btn {
+  position: relative;
+} */
+
+/* Note: Tooltip is unfinished */
+
+/* Tooltip CSS End */

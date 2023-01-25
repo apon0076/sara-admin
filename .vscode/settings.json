@@ -1,0 +1,29 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+
+  "git.ignoreLimitWarning": true,
+  "emmet.preferences": {},
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    ["Gold", "Orchid", "LightSkyBlue"],
+    "Red"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "typescript.tsserver.watchOptions": {
+  
+  }
+}

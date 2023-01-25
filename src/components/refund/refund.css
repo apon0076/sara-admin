@@ -1,0 +1,77 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+.refund_modal__container {
+  display: flex;
+  justify-content: space-between;
+}
+.order_n_product_section {
+  width: 60%;
+  position: relative;
+  padding-right: 10px;
+}
+.order_n_product_section::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #ddd;
+  right: 0;
+  top: 0;
+}
+.order_details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.order_details_section {
+  width: 50%;
+}
+.order_info {
+  display: flex;
+  align-items: center;
+  line-height: 25px;
+}
+.order_info strong {
+  width: 35%;
+}
+.refund_section {
+  width: 40%;
+  padding-left: 10px;
+}
+.refund_section label {
+  font-size: 15px;
+  font-weight: 600;
+}
+.input_box__area {
+  width: 48%;
+}
+.refund_section_input {
+  /* border: 1px solid #ddd;
+  padding: 6px 15px !important; */
+  width: 100%;
+  margin-bottom: 10px;
+}
+.refund_section_doc_input {
+  border: 1px solid #ddd;
+  padding: 6px 15px !important;
+  width: 100%;
+  border-radius: 5px;
+}
+.payment_method_input__group {
+  display: flex;
+  justify-content: space-between;
+}
+.payment_method__dropdown {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.submit_btn {
+  width: 50%;
+  background-color: #1e5793;
+}
+.submit_btn span {
+  font-size: 16px !important;
+}
